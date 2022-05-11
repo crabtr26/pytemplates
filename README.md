@@ -33,14 +33,14 @@ pip install -e .[dev]
 ```
 
 ## Testing
-To run the tests locally:
+To run the tests locally using the development environment:
 ```
 cd python_templates
 pytest
 ```
 
 ## Documentation
-To build and view the documentation locally:
+To build and view the documentation locally using the development environment:
 ```
 cd docs
 make html
