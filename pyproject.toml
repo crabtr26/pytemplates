@@ -1,0 +1,33 @@
+[project]
+name = "mypackage"
+description = "A simple template for a python package."
+version = "1.0.0"
+authors = [
+    {name = "Jacob Crabtree", email = "crabtr26@gmail.com"}
+]
+readme = "README.md"
+classifiers = [
+    "Programming Language :: Python :: 3",
+]
+# dependencies = [
+#     "pandas"
+# ]
+# license = {text = "BSD 3-Clause License"}
+# license = {file = "License.txt"}
+# dynamic = ["version", "classifiers"]
+[dependencies]
+pandas = "1.2.4"
+
+[project.urls]
+repository = "https://github.com/crabtr26/python-templates"
+
+[build-system]
+requires = ["setuptools", "setuptools-scm", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project.optional-dependencies]
+dev = ["pylint", "flake8", "isort", "pre-commit", "black"]
+test = ["pytest", "pytest-asyncio", "pytest-cov"]
+
+[project.scripts]
+greet = "app:main"
