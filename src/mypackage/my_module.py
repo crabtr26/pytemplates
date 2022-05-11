@@ -5,7 +5,7 @@ def greet(name: str) -> str:
         name: The name of the user.
 
     Returns:
-        greeting: A greeting message for the user.
+        string: A greeting for the user.
 
     """
 
