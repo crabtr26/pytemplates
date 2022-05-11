@@ -1,11 +1,6 @@
-import os
-import sys
-from pathlib import Path
-
-project_path = os.path.join(str(Path(__file__).parent.parent))
-sys.path.append(project_path)
-from src.app import main
+import subprocess
 
 
 def test_app():
-    pass
+    greeting = subprocess.run(["greet", "Jacob"], capture_output=True, text=True)
+    assert "Hello Jacob!" in greeting.stdout

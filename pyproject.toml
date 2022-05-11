@@ -1,22 +1,21 @@
 [project]
 name = "mypackage"
 description = "A simple template for a python package."
-version = "1.0.0"
 authors = [
     {name = "Jacob Crabtree", email = "crabtr26@gmail.com"}
 ]
-readme = "README.md"
+license = {file = "LICENSE"}
+readme = {file = "README.md", content-type = "text/markdown"}
+version = "1.0.0"
 classifiers = [
     "Programming Language :: Python :: 3",
 ]
-# dependencies = [
-#     "pandas"
-# ]
-# license = {text = "BSD 3-Clause License"}
-# license = {file = "License.txt"}
+requires-python = ">=3.6"
+dependencies = [
+    "pandas>=1.4"
+]
+
 # dynamic = ["version", "classifiers"]
-[dependencies]
-pandas = "1.2.4"
 
 [project.urls]
 repository = "https://github.com/crabtr26/python-templates"
@@ -26,8 +25,16 @@ requires = ["setuptools", "setuptools-scm", "wheel"]
 build-backend = "setuptools.build_meta"
 
 [project.optional-dependencies]
-dev = ["pylint", "flake8", "isort", "pre-commit", "black"]
-test = ["pytest", "pytest-asyncio", "pytest-cov"]
+dev = [
+    "pylint>=2.13",
+    "flake8>=3.9",
+    "isort>=5.10",
+    "pre-commit>=2.19",
+    "black>=22.3",
+    "pytest>=7.1",
+    "pytest-asyncio>=0.18",
+    "pytest-cov>=3.0"
+]
 
 [project.scripts]
 greet = "app:main"

@@ -93,7 +93,7 @@ disable=abstract-method,
         misplaced-comparison-constant,
         missing-module-docstring,        # jacob swapped function-doctring -> module docstring
         ; missing-function-docstring,    # google ignores function-docstring, jacob ignores module-docstring
-        ; redefined-outer-name,          # test, remove
+        redefined-outer-name,
         metaclass-assignment,
         next-method-called,
         next-method-defined,

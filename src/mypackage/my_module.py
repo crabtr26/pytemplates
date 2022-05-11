@@ -1,6 +1,3 @@
-import argparse
-
-
 def greet(name: str) -> str:
     """Greet the user!
 
