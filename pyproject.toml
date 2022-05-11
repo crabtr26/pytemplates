@@ -12,7 +12,7 @@ classifiers = [
 ]
 requires-python = ">=3.6"
 dependencies = [
-    "pandas>=1.4"
+    "pandas>=1.4",
 ]
 
 # dynamic = ["version", "classifiers"]
@@ -33,7 +33,9 @@ dev = [
     "black>=22.3",
     "pytest>=7.1",
     "pytest-asyncio>=0.18",
-    "pytest-cov>=3.0"
+    "pytest-cov>=3.0",
+    "sphinx>=4.5",
+    "sphinx-rtd-theme>=1.0",
 ]
 
 [project.scripts]
