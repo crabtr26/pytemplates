@@ -8,7 +8,7 @@ from mypackage.module2 import wish_farewell
 
 
 def main():
-    """Start and test the application.
+    """Start the PyTemplates application.
 
     Takes the name of a user as input and returns a greeting. The greeting
     includes a note which verifies that pandas has been imported succesfully

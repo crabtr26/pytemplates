@@ -36,8 +36,8 @@ pip install .
 ## Usage
 From the CLI:
 ```
-pytemplates --hello {name}
-pytemplates --goodbye {name}
+pytemplates --hello {user}
+pytemplates --goodbye {user}
 pytemplates --test
 ```
 
@@ -46,6 +46,7 @@ From a `.py` file:
 import mypackage
 mypackage.greet(user="Jacob")
 mypackage.wish_farewell(user="Jacob")
+mypackage.__version__
 ```
 
 ## Development Setup
