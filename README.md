@@ -6,6 +6,7 @@
 \/     \__, |\__|_| |_|\___/|_| |_|  \/   \___|_| |_| |_| .__/|_|\__,_|\__\___||___/
        |___/                                            |_|                         
 ```
+<!-- source - https://patorjk.com/software/taag/#p=display&f=Ogre&t=Python%20Templates -->
 
 [![License](https://img.shields.io/badge/License-Creative%20Commons%20Zero%20v1.0-informational?style=flat)](./LICENSE)
 [![codecov](https://codecov.io/gh/crabtr26/python_templates/branch/main/graph/badge.svg?token=RRYTJVFDG3)](https://codecov.io/gh/crabtr26/python_templates)
