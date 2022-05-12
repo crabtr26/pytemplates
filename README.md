@@ -10,7 +10,7 @@
 [![License](https://img.shields.io/badge/License-Creative%20Commons%20Zero%20v1.0-informational?style=flat)](./LICENSE)
 [![codecov](https://codecov.io/gh/crabtr26/python_templates/branch/main/graph/badge.svg?token=RRYTJVFDG3)](https://codecov.io/gh/crabtr26/python_templates)
 [![Code style: black](https://img.shields.io/badge/code%20style-black-000000?style=flat)](https://github.com/psf/black)
-[![Imports: isort](https://img.shields.io/badge/%20imports-isort-%231674b1?style=flat)](https://pycqa.github.io/isort/)
+[![Imports: isort](https://img.shields.io/badge/%20imports-isort-blueviolet?style=flat)](https://pycqa.github.io/isort/)
 
 ## Description
 A basic template which includes proper package structure, imports, and a working setup.py.
