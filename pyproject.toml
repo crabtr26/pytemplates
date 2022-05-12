@@ -16,7 +16,7 @@ dependencies = [
 dynamic = ["version"]
 
 [project.urls]
-repository = "https://github.com/crabtr26/python-templates"
+repository = "https://github.com/crabtr26/pytemplates"
 
 [build-system]
 requires = ["setuptools", "setuptools-scm", "wheel"]

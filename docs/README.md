@@ -1,7 +1,7 @@
 ## Build
 To build and view the documentation locally using the development environment, follow the steps below:
 ```
-cd docs
+cd pytemplates/docs
 make html
 google-chrome build/html/index.html
 ```

@@ -1,20 +1,20 @@
 ```
 
-   ___         _    _                     _____                         _         _
-  / _ \ _   _ | |_ | |__    ___   _ __   /__   \ ___  _ __ ___   _ __  | |  __ _ | |_  ___  ___
- / /_)/| | | || __|| '_ \  / _ \ | '_ \    / /\// _ \| '_ ` _ \ | '_ \ | | / _` || __|/ _ \/ __|
-/ ___/ | |_| || |_ | | | || (_) || | | |  / /  |  __/| | | | | || |_) || || (_| || |_|  __/\__ \
-\/      \__, | \__||_| |_| \___/ |_| |_|  \/    \___||_| |_| |_|| .__/ |_| \__,_| \__|\___||___/
-        |___/                                                   |_|
+   ___        _____                         _         _
+  / _ \ _   _/__   \ ___  _ __ ___   _ __  | |  __ _ | |_  ___  ___
+ / /_)/| | | | / /\// _ \| '_ ` _ \ | '_ \ | | / _` || __|/ _ \/ __|
+/ ___/ | |_| |/ /  |  __/| | | | | || |_) || || (_| || |_|  __/\__ \
+\/      \__, |\/    \___||_| |_| |_|| .__/ |_| \__,_| \__|\___||___/
+        |___/                       |_|
 
 ```
-<!-- source - https://patorjk.com/software/taag/#p=display&h=1&f=Ogre&t=Python%20Templates -->
+<!-- source - https://patorjk.com/software/taag/#p=display&h=1&f=Ogre&t=PyTemplates -->
 
 [![License](https://img.shields.io/badge/License-Creative%20Commons%20Zero%20v1.0-informational?style=flat)](./LICENSE)
 [![Documentation: Sphinx](https://img.shields.io/badge/Documentation-Sphinx-08476D?style=flat)](https://www.sphinx-doc.org/en/master/)
 [![Code style: black](https://img.shields.io/badge/code%20style-black-151515?style=flat)](https://github.com/psf/black)
-[![codecov](https://codecov.io/gh/crabtr26/python_templates/branch/main/graph/badge.svg?token=RRYTJVFDG3)](https://codecov.io/gh/crabtr26/python_templates)
-[![pre-commit.ci status](https://results.pre-commit.ci/badge/github/crabtr26/python_templates/main.svg)](https://results.pre-commit.ci/latest/github/crabtr26/python_templates/main)
+[![codecov](https://codecov.io/gh/crabtr26/pytemplates/branch/main/graph/badge.svg?token=RRYTJVFDG3)](https://codecov.io/gh/crabtr26/pytemplates)
+[![pre-commit.ci status](https://results.pre-commit.ci/badge/github/crabtr26/pytemplates/main.svg)](https://results.pre-commit.ci/latest/github/crabtr26/pytemplates/main)
 <!-- [![Imports: isort](https://img.shields.io/badge/%20imports-isort-EE8236?style=flat)](https://pycqa.github.io/isort/) -->
 
 
@@ -28,8 +28,8 @@ in the pyproject.toml.
 ## Setup
 Using `virtualenv`:
 ```
-git clone https://github.com/crabtr26/python_templates.git
-cd python_templates
+git clone https://github.com/crabtr26/pytemplates.git
+cd pytemplates
 virtualenv venv
 source venv/bin/activate
 pip install .
@@ -54,8 +54,8 @@ mypackage.__version__
 ## Development Setup
 Using `virtualenv`:
 ```
-git clone https://github.com/crabtr26/python_templates.git
-cd python_templates
+git clone https://github.com/crabtr26/pytemplates.git
+cd pytemplates
 virtualenv venv
 source venv/bin/activate
 pip install -e .[dev]
@@ -64,7 +64,7 @@ pip install -e .[dev]
 ## Testing
 To run the tests locally using the development environment:
 ```
-cd python_templates
+cd pytemplates
 pytest
 ```
 
