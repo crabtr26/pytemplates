@@ -10,9 +10,9 @@ from mypackage.module2 import wish_farewell
 def main():
     """Start the PyTemplates application.
 
-    Takes the name of a user as input and returns a greeting. The greeting
-    includes a note which verifies that pandas has been imported succesfully
-    based on your package dependencies.
+    The application has three options: --hello to greet the user, --goodbye to wish
+    them farewell, and --test to run both functions and verify that the dependencies
+    for pytemplates have been installed.
 
     """
     parser = argparse.ArgumentParser(description="A python application template.")
