@@ -1,12 +1,3 @@
-<!-- [![Build and Test](https://github.com/snowflakedb/snowflake-connector-python/actions/workflows/build_test.yml/badge.svg)](https://github.com/snowflakedb/snowflake-connector-python/actions/workflows/build_test.yml)
-[![codecov](https://codecov.io/gh/snowflakedb/snowflake-connector-python/branch/main/graph/badge.svg?token=MVKSNtnLr0)](https://codecov.io/gh/snowflakedb/snowflake-connector-python)
-[![PyPi](https://img.shields.io/pypi/v/snowflake-connector-python.svg)](https://pypi.python.org/pypi/snowflake-connector-python/) -->
-<!-- [![License](https://img.shields.io/badge/license-MIT-green)](./LICENSE) [![Codestyle Black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black) -->
-
-<!-- ![NPM License](https://img.shields.io/npm/l/:packageName) -->
-# Python Templates
-<!-- Templates for developing, testing, packaging, and deploying python applications. -->
-
 ```
    ___       _   _                   _____                     _       _            
   / _ \_   _| |_| |__   ___  _ __   /__   \___ _ __ ___  _ __ | | __ _| |_ ___  ___ 
@@ -15,14 +6,12 @@
 \/     \__, |\__|_| |_|\___/|_| |_|  \/   \___|_| |_| |_| .__/|_|\__,_|\__\___||___/
        |___/                                            |_|                         
 ```
-                    
 
 [![License](https://img.shields.io/badge/License-Creative%20Commons%20Zero%20v1.0-informational?style=flat)](./LICENSE)
 [![codecov](https://codecov.io/gh/crabtr26/python_templates/branch/main/graph/badge.svg?token=RRYTJVFDG3)](https://codecov.io/gh/crabtr26/python_templates)
 [![Code style: black](https://img.shields.io/badge/code%20style-black-151515?style=flat)](https://github.com/psf/black)
 [![Imports: isort](https://img.shields.io/badge/%20imports-isort-EE8236?style=flat)](https://pycqa.github.io/isort/)
 [![Documentation: Sphinx](https://img.shields.io/badge/Documentation-Sphinx-08476D?style=flat)](https://www.sphinx-doc.org/en/master/)
-
 
 ## Description
 A basic template which includes proper package structure, imports, and a working setup.py.
