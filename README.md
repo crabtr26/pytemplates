@@ -1,11 +1,11 @@
 ```
 
-   ___         _    _                     _____                         _         _             
-  / _ \ _   _ | |_ | |__    ___   _ __   /__   \ ___  _ __ ___   _ __  | |  __ _ | |_  ___  ___ 
+   ___         _    _                     _____                         _         _
+  / _ \ _   _ | |_ | |__    ___   _ __   /__   \ ___  _ __ ___   _ __  | |  __ _ | |_  ___  ___
  / /_)/| | | || __|| '_ \  / _ \ | '_ \    / /\// _ \| '_ ` _ \ | '_ \ | | / _` || __|/ _ \/ __|
 / ___/ | |_| || |_ | | | || (_) || | | |  / /  |  __/| | | | | || |_) || || (_| || |_|  __/\__ \
 \/      \__, | \__||_| |_| \___/ |_| |_|  \/    \___||_| |_| |_|| .__/ |_| \__,_| \__|\___||___/
-        |___/                                                   |_|                             
+        |___/                                                   |_|
 
 ```
 <!-- source - https://patorjk.com/software/taag/#p=display&h=1&f=Ogre&t=Python%20Templates -->
@@ -17,10 +17,11 @@
 [![Documentation: Sphinx](https://img.shields.io/badge/Documentation-Sphinx-08476D?style=flat)](https://www.sphinx-doc.org/en/master/)
 
 ## Description
-A basic template which includes proper package structure, imports, and a working setup.py.
+A basic template which includes proper package structure, imports, and a working `setup.py`.
 Includes flake8, pylint, isort, and pytest settings with configurations compatible with
-the black autoformatter. Pylint settings are based on the Google style standards for python.
-Package metadata and dependency information is stored in pyproject.toml.
+the black autoformatter. Pylint settings are based on the Google style standards for python
+and adapted for black compatibility. Package metadata and dependency information is stored
+in the pyproject.toml.
 
 ## Setup
 Using `virtualenv`:
@@ -33,8 +34,18 @@ pip install .
 ```
 
 ## Usage
+From the CLI:
 ```
-greet {User}
+pytemplates --hello {name}
+pytemplates --goodbye {name}
+pytemplates --test
+```
+
+From a `.py` file:
+```python
+import mypackage
+mypackage.greet(user="Jacob")
+mypackage.wish_farewell(user="Jacob")
 ```
 
 ## Development Setup

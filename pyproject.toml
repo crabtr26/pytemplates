@@ -37,4 +37,4 @@ dev = [
 ]
 
 [project.scripts]
-greet = "app:main"
+pytemplates = "app:main"

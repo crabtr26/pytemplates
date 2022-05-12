@@ -4,10 +4,18 @@ mypackage package
 Submodules
 ----------
 
-mypackage.my\_module module
----------------------------
+mypackage.module1 module
+------------------------
 
-.. automodule:: mypackage.my_module
+.. automodule:: mypackage.module1
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+mypackage.module2 module
+------------------------
+
+.. automodule:: mypackage.module2
    :members:
    :undoc-members:
    :show-inheritance:
