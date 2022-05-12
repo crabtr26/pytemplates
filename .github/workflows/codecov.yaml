@@ -21,6 +21,6 @@ jobs:
     - name: Install package
       run: source venv/bin/activate && pip install .[dev]
     - name: Run tests and collect coverage
-      run: source venv/bin/activate && pytest
+      run: source venv/bin/activate && pytest --cov=src
     - name: Upload coverage reports to Codecov with GitHub Action
       uses: codecov/codecov-action@v3
