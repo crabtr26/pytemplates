@@ -4,8 +4,17 @@
 <!-- [![License](https://img.shields.io/badge/license-MIT-green)](./LICENSE) [![Codestyle Black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black) -->
 
 <!-- ![NPM License](https://img.shields.io/npm/l/:packageName) -->
-# Python Templates
-<!-- Templates for developing, testing, packaging, and deploying python applications. -->
+<!-- # Python Templates
+<!-- Templates for developing, testing, packaging, and deploying python applications. --> -->
+
+
+   ___       _   _                   _____                     _       _            
+  / _ \_   _| |_| |__   ___  _ __   /__   \___ _ __ ___  _ __ | | __ _| |_ ___  ___ 
+ / /_)/ | | | __| '_ \ / _ \| '_ \    / /\/ _ \ '_ ` _ \| '_ \| |/ _` | __/ _ \/ __|
+/ ___/| |_| | |_| | | | (_) | | | |  / / |  __/ | | | | | |_) | | (_| | ||  __/\__ \
+\/     \__, |\__|_| |_|\___/|_| |_|  \/   \___|_| |_| |_| .__/|_|\__,_|\__\___||___/
+       |___/                                            |_|                        
+
 
 [![License](https://img.shields.io/badge/License-Creative%20Commons%20Zero%20v1.0-informational?style=flat)](./LICENSE)
 [![codecov](https://codecov.io/gh/crabtr26/python_templates/branch/main/graph/badge.svg?token=RRYTJVFDG3)](https://codecov.io/gh/crabtr26/python_templates)
