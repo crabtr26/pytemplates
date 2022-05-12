@@ -5,7 +5,7 @@
 
 <!-- ![NPM License](https://img.shields.io/npm/l/:packageName) -->
 # Python Templates
-Templates for developing, testing, packaging, and deploying python applications.
+<!-- Templates for developing, testing, packaging, and deploying python applications. -->
 
 [![License](https://img.shields.io/badge/License-Creative%20Commons%20Zero%20v1.0-brightgreen)](./LICENSE)
 [![codecov](https://codecov.io/gh/crabtr26/python_templates/branch/main/graph/badge.svg?token=RRYTJVFDG3)](https://codecov.io/gh/crabtr26/python_templates)
