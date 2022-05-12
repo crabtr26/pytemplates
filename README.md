@@ -71,7 +71,7 @@ pytest
 ## Documentation
 To build and view the documentation locally using the development environment:
 ```
-cd docs
+cd pytemplates/docs
 make html
 google-chrome build/html/index.html
 ```
