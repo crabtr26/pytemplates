@@ -9,7 +9,7 @@ readme = {file = "README.md", content-type = "text/markdown"}
 classifiers = [
     "Programming Language :: Python :: 3",
 ]
-requires-python = ">=3.6"
+requires-python = ">=3.8"
 dependencies = [
     "pandas>=1.4",
 ]
@@ -25,7 +25,7 @@ build-backend = "setuptools.build_meta"
 [project.optional-dependencies]
 dev = [
     "pylint>=2.13",
-    "flake8>=3.9",
+    "flake8>=4.0",
     "isort>=5.10",
     "pre-commit>=2.19",
     "black>=22.3",
