@@ -6,28 +6,34 @@ RUN apt-get update \
 
 # Install Poetry - respects $POETRY_VERSION & $POETRY_HOME
 ENV POETRY_HOME="/opt/poetry"
+ENV POETRY_VERSION="1.1.13"
 RUN curl -sSL https://install.python-poetry.org/ | python
 
 # Add Poetry to the path
 ENV PATH="$POETRY_HOME/bin:$PATH"
 
-# Tell poetry to create a virtualenv in /.venv
+# Tell poetry to create the virtualenv in /.venv
 RUN poetry config virtualenvs.in-project true
 
 # Copy in the config files:
 COPY pyproject.toml ./
 
-# Install only dependencies:
+# Install only dependencies first so they are cached by Docker:
 RUN poetry install --no-root --no-dev
 
-# Copy in source code else and install pytemplates:
+# Copy in the source code and install it into the virtualenv:
 COPY src/ src/
-COPY README.md .
-RUN poetry install --no-dev
+COPY README.md ./
 
+# Installing with pip since poetry does editable installs by default
+SHELL ["/bin/bash", "-c"]
+RUN source .venv/bin/activate && pip install . --no-deps
 
+# Hopefully this will work soon
+# RUN poetry install --no-dev --no-editable
+
+# Only keep the virtualenv in the runtime image
 FROM python:3.8-slim AS runtime
 COPY --from=build .venv .venv
-COPY --from=build src/ src/
 ENV PATH=".venv/bin:$PATH"
 ENTRYPOINT ["pytemplates"]
