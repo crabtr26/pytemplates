@@ -26,18 +26,18 @@ and adapted for black compatibility. Package metadata and dependency information
 in the pyproject.toml.
 
 ## Setup
-Using `virtualenv`:
+Using `poetry`:
 ```
 git clone https://github.com/crabtr26/pytemplates.git
 cd pytemplates
-virtualenv venv
-source venv/bin/activate
-pip install .
+poetry install --no-dev
 ```
 
 ## Usage
 From the CLI:
 ```
+cd pytemplates
+poetry shell
 pytemplates --hello {user}
 pytemplates --goodbye {user}
 pytemplates --test
@@ -46,26 +46,28 @@ pytemplates --test
 From a `.py` file:
 ```python
 import mypackage
-mypackage.greet(user="Jacob")
-mypackage.wish_farewell(user="Jacob")
 mypackage.__version__
+
+from mypackage import subpackage
+subpackage.greet(user="Jacob")
+
+from mypackage import wish_farewell
+wish_farewell(user="Jacob")
 ```
 
 ## Development Setup
-Using `virtualenv`:
+Using `poetry`:
 ```
 git clone https://github.com/crabtr26/pytemplates.git
 cd pytemplates
-virtualenv venv
-source venv/bin/activate
-pip install -e .[dev]
+poetry install
 ```
 
 ## Testing
 To run the tests locally using the development environment:
 ```
 cd pytemplates
-pytest
+poetry run pytest
 ```
 
 ## Documentation
