@@ -1,43 +1,35 @@
-import argparse
-
-import pandas as pd
+import fastapi
 
 from pytemplates import __version__
 from pytemplates.core.module1 import greet
 from pytemplates.core.module2 import wish_farewell
 
+app = fastapi.FastAPI()
 
-def main():
-    """Start the PyTemplates application.
+@app.get("/")
+async def root():
+    return greet(user="PyTemplates User")
 
-    The application has three options: --hello to greet the user, --goodbye to wish
-    them farewell, and --test to run both functions and verify that the dependencies
-    for pytemplates have been installed.
+@app.get("/test")
+async def test():
+    hello = greet(user="PyTemplates User")
+    message = f"{hello} PyTemplates has been installed successfully!"
+    mypackage_info = f"pytemplates=={__version__}"
+    pandas_info = f"fastapi=={fastapi.__version__}"
+    print(message, mypackage_info, pandas_info)
+    goodbye = wish_farewell(user="PyTemplates User")
+    print(goodbye, "Thank you for using PyTemplates!")
+    final_message = message, mypackage_info, pandas_info, goodbye, "Thank you for using PyTemplates!"
+    return final_message
 
-    """
-    parser = argparse.ArgumentParser(description="A python application template.")
-    parser.add_argument("--hello", type=str, metavar="STRING", help="Greet the user!")
-    parser.add_argument(
-        "--goodbye", type=str, metavar="STRING", help="Wish the user farewell!"
-    )
-    parser.add_argument(
-        "--test", action="store_true", help="Test the PyTemplates application."
-    )
-    args = vars(parser.parse_args())
+@app.post("/hello")
+async def hello(user: str):
+    return greet(user=user)
 
-    if args["hello"]:
-        hello = greet(user=args["hello"])
-        print(hello)
+@app.post("/goodbye")
+async def hello(user: str):
+    return wish_farewell(user=user)
 
-    if args["goodbye"]:
-        goodbye = wish_farewell(user=args["goodbye"])
-        print(goodbye)
+if __name__ == "__main__":
+    app()
 
-    if args["test"]:
-        hello = greet(user="PyTemplates User")
-        message = f"{hello} PyTemplates has been installed successfully!"
-        mypackage_info = f"mypackage=={__version__}"
-        pandas_info = f"pandas=={pd.__version__}"
-        print(message, mypackage_info, pandas_info)
-        goodbye = wish_farewell(user="PyTemplates User")
-        print(goodbye, "Thank you for using PyTemplates!")
