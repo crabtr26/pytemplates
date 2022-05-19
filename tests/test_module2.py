@@ -1,4 +1,4 @@
-from mypackage.subpackage.module2 import wish_farewell
+from pytemplates.core.module2 import wish_farewell
 
 
 def test_module2():

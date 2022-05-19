@@ -45,13 +45,13 @@ pytemplates --test
 
 From a `.py` file:
 ```python
-import mypackage
+import pytemplates
 mypackage.__version__
 
-from mypackage import subpackage
-subpackage.greet(user="Jacob")
+from pytemplates import core
+core.greet(user="Jacob")
 
-from mypackage import wish_farewell
+from pytemplates.core import wish_farewell
 wish_farewell(user="Jacob")
 ```
 

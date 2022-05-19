@@ -2,9 +2,9 @@ import argparse
 
 import pandas as pd
 
-from mypackage import __version__
-from mypackage.subpackage.module1 import greet
-from mypackage.subpackage.module2 import wish_farewell
+from pytemplates import __version__
+from pytemplates.core.module1 import greet
+from pytemplates.core.module2 import wish_farewell
 
 
 def main():

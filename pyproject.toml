@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "mypackage"
+name = "pytemplates"
 version = "1.0.0"
 description = "A simple template for a python package."
 repository = "https://github.com/crabtr26/pytemplates"
@@ -31,4 +31,4 @@ requires = ["poetry-core>=1.0.0"]
 build-backend = "poetry.core.masonry.api"
 
 [tool.poetry.scripts]
-pytemplates = "mypackage.app:main"
+pytemplates = "pytemplates.app:main"

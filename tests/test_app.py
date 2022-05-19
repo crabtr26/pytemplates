@@ -2,7 +2,7 @@ import subprocess
 
 import pandas as pd
 
-import mypackage
+import pytemplates
 
 
 def test_app():
@@ -25,5 +25,5 @@ def test_app():
         in test.stdout
     )
     assert "Goodbye PyTemplates User! Thank you for using PyTemplates!" in test.stdout
-    assert f"mypackage=={mypackage.__version__}" in test.stdout
+    assert f"mypackage=={pytemplates.__version__}" in test.stdout
     assert f"pandas=={pd.__version__}" in test.stdout

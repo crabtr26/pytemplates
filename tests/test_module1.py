@@ -1,4 +1,4 @@
-from mypackage.subpackage.module1 import greet
+from pytemplates.core.module1 import greet
 
 
 def test_module1():
