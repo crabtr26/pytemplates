@@ -5,8 +5,8 @@ RUN apt-get update \
     build-essential
 
 # Install Poetry - respects $POETRY_VERSION & $POETRY_HOME
-ENV POETRY_HOME="/opt/poetry"
-ENV POETRY_VERSION="1.1.13"
+ENV POETRY_HOME="/opt/poetry" \
+    POETRY_VERSION="1.1.13"
 RUN curl -sSL https://install.python-poetry.org/ | python
 
 # Add Poetry to the path
@@ -16,7 +16,7 @@ ENV PATH="$POETRY_HOME/bin:$PATH"
 RUN poetry config virtualenvs.in-project true
 
 # Copy in the config files:
-COPY pyproject.toml ./
+COPY poetry.lock pyproject.toml ./
 
 # Install only dependencies first so they are cached by Docker:
 RUN poetry install --no-root --no-dev
@@ -27,6 +27,7 @@ COPY README.md ./
 
 # Installing with pip since poetry does editable installs by default
 SHELL ["/bin/bash", "-c"]
+RUN source .venv/bin/activate && pip install --upgrade pip
 RUN source .venv/bin/activate && pip install . --no-deps
 
 # Hopefully this will work soon
