@@ -46,10 +46,10 @@ pytemplates --test
 From a `.py` file:
 ```python
 import pytemplates
-mypackage.__version__
+pytemplates.__version__
 
-from pytemplates import core
-core.greet(user="Jacob")
+import pytemplates
+pytemplates.greet(user="Jacob")
 
 from pytemplates.core import wish_farewell
 wish_farewell(user="Jacob")
