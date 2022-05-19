@@ -3,8 +3,8 @@ import argparse
 import pandas as pd
 
 from mypackage import __version__
-from mypackage.module1 import greet
-from mypackage.module2 import wish_farewell
+from mypackage.subpackage.module1 import greet
+from mypackage.subpackage.module2 import wish_farewell
 
 
 def main():
