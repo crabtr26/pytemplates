@@ -37,4 +37,4 @@ RUN source .venv/bin/activate && pip install . --no-deps
 FROM python:3.8-slim AS runtime
 COPY --from=build .venv .venv
 ENV PATH=".venv/bin:$PATH"
-ENTRYPOINT ["pytemplates"]
+ENTRYPOINT ["uvicorn", "pytemplates.app:app", "--proxy-headers", "--host", "0.0.0.0"]

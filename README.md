@@ -34,25 +34,10 @@ poetry install --no-dev
 ```
 
 ## Usage
-From the CLI:
 ```
 cd pytemplates
 poetry shell
-pytemplates --hello {user}
-pytemplates --goodbye {user}
-pytemplates --test
-```
-
-From a `.py` file:
-```python
-import pytemplates
-pytemplates.__version__
-
-import pytemplates
-pytemplates.greet(user="Jacob")
-
-from pytemplates.core import wish_farewell
-wish_farewell(user="Jacob")
+uvicorn pytemplates.app:app
 ```
 
 ## Development Setup
@@ -61,6 +46,15 @@ Using `poetry`:
 git clone https://github.com/crabtr26/pytemplates.git
 cd pytemplates
 poetry install
+```
+
+## Production Setup
+Using `Docker`:
+```
+git clone https://github.com/crabtr26/pytemplates.git
+cd pytemplates
+docker build . -t api:latest
+docker run --rm -p 5000:5000 api --port 5000
 ```
 
 ## Testing
