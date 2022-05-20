@@ -61,8 +61,8 @@ services:
       - --accesslog
       # Enable the Traefik log, for configurations and errors
       - --log
-      # Enable metrics
-      - --metrics
+      # # Enable metrics
+      # - --metrics
       # Enable the Dashboard and API
       - --api
     networks:
