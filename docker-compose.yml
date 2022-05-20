@@ -61,6 +61,8 @@ services:
       - --accesslog
       # Enable the Traefik log, for configurations and errors
       - --log
+      # Enable metrics
+      - --metrics
       # Enable the Dashboard and API
       - --api
     networks:
@@ -68,11 +70,11 @@ services:
       # any other service that needs to be publicly available with HTTPS
       - traefik-public
 
-  backend:
+  api:
     build: ./
     restart: always
     labels:
-      # Enable Traefik for this specific "backend" service
+      # Enable Traefik for this specific "api" service
       - traefik.enable=true
       # Define the port inside of the Docker service to use
       - traefik.http.services.app.loadbalancer.server.port=80
