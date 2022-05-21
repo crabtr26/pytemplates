@@ -70,11 +70,19 @@ services:
       - traefik-public
 
   fastapi:
+    image: pytemplates_fastapi:latest
     build: ./
     restart: always
     deploy:
       restart_policy:
         condition: on-failure
+      resources:
+        limits:
+          cpus: '1'
+          memory: 2G
+        reservations:
+          cpus: '1'
+          memory: 1G
     labels:
       # Enable Traefik for this specific "fastapi" service
       - traefik.enable=true
