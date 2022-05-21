@@ -1,6 +1,6 @@
 services:
 
-  backend:
+  fastapi:
     ports:
       - 3000:80
 
