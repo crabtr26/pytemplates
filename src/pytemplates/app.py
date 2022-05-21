@@ -1,3 +1,6 @@
+import os
+import socket
+
 import fastapi
 
 from pytemplates import __version__
@@ -20,6 +23,16 @@ async def hello(user: str):
 @app.get("/goodbye")
 async def hello(user: str):
     return wish_farewell(user=user)
+
+
+@app.get("/whoami")
+async def whoami():
+    document = {
+        "host_name": socket.gethostname(),
+        "host_ip": socket.gethostbyname(socket.gethostname()),
+        "process_id": os.getpid(),
+    }
+    return document
 
 
 @app.get("/test")
