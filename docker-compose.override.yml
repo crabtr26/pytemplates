@@ -2,16 +2,7 @@ services:
 
   fastapi:
     ports:
-      - 3000:80
-    deploy:
-      replicas: 1
-      resources:
-        limits:
-          cpus: '1'
-          memory: 1500M
-        reservations:
-          cpus: '1'
-          memory: 1500M
+      - 8000:80
 
 networks:
   traefik-public:
