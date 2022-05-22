@@ -1,7 +1,7 @@
-from locust import HttpUser, task
+from locust import FastHttpUser, task
 
 
-class PyTemplatesUser(HttpUser):
+class PyTemplatesUser(FastHttpUser):
     @task
     def test(self):
         self.client.get("test")
