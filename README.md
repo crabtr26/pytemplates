@@ -76,7 +76,7 @@ Using `Docker Compose`:
 ```bash
 git clone https://github.com/crabtr26/pytemplates.git
 cd pytemplates
-docker compose up
+docker compose -f docker-compose.yml up
 ```
 
 Using `Docker Swarm`:
