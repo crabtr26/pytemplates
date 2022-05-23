@@ -53,15 +53,38 @@ cd pytemplates
 poetry install
 ```
 
-## Production Setup
-
 Using `Docker`:
 
 ```bash
 git clone https://github.com/crabtr26/pytemplates.git
 cd pytemplates
-docker build . -t api:latest
-docker run --rm -p 5000:5000 api --port 5000
+docker build . -t api
+docker run --rm api
+```
+
+Using `Docker Compose`:
+
+```bash
+git clone https://github.com/crabtr26/pytemplates.git
+cd pytemplates
+docker compose up
+```
+
+## Production Setup
+Using `Docker Compose`:
+
+```bash
+git clone https://github.com/crabtr26/pytemplates.git
+cd pytemplates
+docker compose up
+```
+
+Using `Docker Swarm`:
+
+```bash
+git clone https://github.com/crabtr26/pytemplates.git
+cd pytemplates
+docker stack deploy -c docker-compose.yml pytemplates
 ```
 
 ## Testing
