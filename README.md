@@ -19,11 +19,16 @@
 
 ## Description
 
-A basic template which includes proper package structure, imports, and a working `setup.py`.
+A basic template which includes proper package structure with a functioning package installation.
+The package is built using poetry; metadata and dependency information is stored in the pyproject.toml.
 Includes flake8, pylint, isort, and pytest settings with configurations compatible with
 the black autoformatter. Pylint settings are based on the Google style standards for python
-and adapted for black compatibility. Package metadata and dependency information is stored
-in the pyproject.toml.
+and adapted for black compatibility.  Testing is automated using github workflows, codecov.io,
+and pre-commit-ci. Application deployment is managed using multi-staged docker builds for fast develop/deploy
+cycles.
+
+This template includes two services: an API built using fastapi and a reverse-proxy built using traefik. The
+docker-compose.yml can be used to build and deploy both services on a single machine or on a docker swarm cluster.
 
 ## Setup
 
