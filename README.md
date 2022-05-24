@@ -51,9 +51,9 @@ git clone https://github.com/crabtr26/pytemplates.git
 cd pytemplates
 poetry install
 poetry shell
-{pytest}                              //Optional
-{pre-commit run --all-files}          //Optional
-{locust tests/test_performance.py}    //Optional
+pytest                              //Optional
+pre-commit run --all-files          //Optional
+locust tests/test_performance.py    //Optional
 uvicorn pytemplates.app:app
 ```
 
