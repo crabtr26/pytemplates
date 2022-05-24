@@ -29,6 +29,7 @@ cycles.
 
 This template includes two services: an API built using fastapi and a reverse-proxy built using traefik. The
 docker-compose.yml can be used to build and deploy both services on a single machine or on a docker swarm cluster.
+The docker-compose.override.yml is used to override the production configuration during local development.
 
 ## Setup
 
