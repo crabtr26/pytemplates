@@ -52,9 +52,6 @@ git clone https://github.com/crabtr26/pytemplates.git
 cd pytemplates
 poetry install
 poetry shell
-pytest                                     //Optional
-pre-commit run --all-files                 //Optional
-locust -f tests/test_performance.py        //Optional
 uvicorn pytemplates.app:app
 ```
 
@@ -94,11 +91,28 @@ docker stack deploy -c docker-compose.yml pytemplates
 
 ## Testing
 
-To run the tests locally using the development environment:
+To run the unit tests locally using the development environment:
 
 ```bash
 cd pytemplates
 poetry run pytest
+```
+
+To run performance tests locally using the development environment,
+run the app from one terminal:
+
+```bash
+cd pytemplates
+poetry shell
+uvicorn pytemplates.app:app
+```
+
+Then run locust from another terminal:
+
+```bash
+cd pytemplates
+poetry shell
+locust -f tests/test_performance.py
 ```
 
 ## Documentation
