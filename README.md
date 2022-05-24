@@ -24,14 +24,14 @@ The package is built using poetry; metadata and dependency information is stored
 Includes flake8, pylint, isort, and pytest settings with configurations compatible with
 the black autoformatter. Pylint settings are based on the Google style standards for python
 and adapted for black compatibility.  Testing is automated using github workflows, codecov.io,
-and pre-commit-ci. Application deployment is managed using multi-staged docker builds for fast develop/deploy
+and pre-commit.ci. Application deployment is managed using multi-staged docker builds for fast develop/deploy
 cycles.
 
 This template includes two services: an API built using fastapi and a reverse-proxy built using traefik. The
 docker-compose.yml can be used to build and deploy both services on a single machine or on a docker swarm cluster.
 The docker-compose.override.yml is used to override the production configuration during local development.
 
-## Setup
+## Basic Setup
 
 Using `poetry`:
 
@@ -39,13 +39,6 @@ Using `poetry`:
 git clone https://github.com/crabtr26/pytemplates.git
 cd pytemplates
 poetry install --no-dev
-```
-
-## Usage
-
-```bash
-cd pytemplates
-poetry shell
 uvicorn pytemplates.app:app
 ```
 
@@ -57,6 +50,9 @@ Using `poetry`:
 git clone https://github.com/crabtr26/pytemplates.git
 cd pytemplates
 poetry install
+pytest
+pre-commit run --all-files
+uvicorn pytemplates.app:app
 ```
 
 Using `Docker`:
