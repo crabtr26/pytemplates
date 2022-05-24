@@ -50,8 +50,10 @@ Using `poetry`:
 git clone https://github.com/crabtr26/pytemplates.git
 cd pytemplates
 poetry install
-pytest
-pre-commit run --all-files
+poetry shell
+{pytest}                              //Optional
+{pre-commit run --all-files}          //Optional
+{locust tests/test_performance.py}    //Optional
 uvicorn pytemplates.app:app
 ```
 
