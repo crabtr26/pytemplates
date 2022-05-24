@@ -39,6 +39,7 @@ Using `poetry`:
 git clone https://github.com/crabtr26/pytemplates.git
 cd pytemplates
 poetry install --no-dev
+poetry shell
 uvicorn pytemplates.app:app
 ```
 
