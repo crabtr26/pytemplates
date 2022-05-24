@@ -76,7 +76,7 @@ docker compose up
 ```
 
 ## Production Setup
-Using `Docker Compose`:
+On a single server using `Docker Compose`:
 
 ```bash
 git clone https://github.com/crabtr26/pytemplates.git
@@ -84,7 +84,7 @@ cd pytemplates
 docker compose -f docker-compose.yml up
 ```
 
-Using `Docker Swarm`:
+On a single server or a cluster using `Docker Swarm`:
 
 ```bash
 git clone https://github.com/crabtr26/pytemplates.git
