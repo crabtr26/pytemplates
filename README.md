@@ -53,7 +53,7 @@ poetry install
 poetry shell
 pytest                              //Optional
 pre-commit run --all-files          //Optional
-locust tests/test_performance.py    //Optional
+locust -f tests/test_performance.py    //Optional
 uvicorn pytemplates.app:app
 ```
 
