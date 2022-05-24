@@ -64,7 +64,7 @@ Using `Docker`:
 git clone https://github.com/crabtr26/pytemplates.git
 cd pytemplates
 docker build . -t api
-docker run --rm api
+docker run --rm -p 8000:80 api
 ```
 
 Using `Docker Compose`:
