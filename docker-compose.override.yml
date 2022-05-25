@@ -1,8 +1,8 @@
 services:
 
-  api:
+  frontend:
     ports:
-      - 8000:80
+      - 80:80
 
 networks:
   traefik-public:

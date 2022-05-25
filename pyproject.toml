@@ -12,10 +12,12 @@ classifiers = [
 
 [tool.poetry.dependencies]
 python = "^3.8"
-fastapi = "^0.78.0"
-uvicorn = "^0.17.6"
+plotly = "^5.8.0"
+dash = "^2.4.1"
+gunicorn = "^20.1.0"
 
 [tool.poetry.dev-dependencies]
+pipdeptree = "^2.2.1"
 pylint = "^2.13.8"
 flake8 = "^4.0.1"
 isort = "^5.10.1"

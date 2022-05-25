@@ -1,56 +1,26 @@
 import os
-import socket
 
-import fastapi
+from dash import Dash, Input, Output, dcc, html
 
-from pytemplates import __version__
-from pytemplates.core.module1 import greet
-from pytemplates.core.module2 import wish_farewell
+external_stylesheets = ["https://codepen.io/chriddyp/pen/bWLwgP.css"]
 
-app = fastapi.FastAPI()
+app = Dash(__name__, external_stylesheets=external_stylesheets)
 
+server = app.server
 
-@app.get("/")
-async def root():
-    return greet(user="PyTemplates User")
-
-
-@app.get("/hello")
-async def hello(user: str):
-    return greet(user=user)
+app.layout = html.Div(
+    [
+        html.H2("Hello World"),
+        dcc.Dropdown(["LA", "NYC", "MTL"], "LA", id="dropdown"),
+        html.Div(id="display-value"),
+    ]
+)
 
 
-@app.get("/goodbye")
-async def hello(user: str):
-    return wish_farewell(user=user)
-
-
-@app.get("/whoami")
-async def whoami():
-    document = {
-        "host_name": socket.gethostname(),
-        "host_ip": socket.gethostbyname(socket.gethostname()),
-        "process_id": os.getpid(),
-    }
-    return document
-
-
-@app.get("/test")
-async def test():
-    hello = greet(user="PyTemplates User")
-    message = f"{hello} PyTemplates has been installed successfully!"
-    mypackage_info = f"pytemplates=={__version__}"
-    pandas_info = f"fastapi=={fastapi.__version__}"
-    goodbye = wish_farewell(user="PyTemplates User")
-    final_message = (
-        message,
-        mypackage_info,
-        pandas_info,
-        goodbye,
-        "Thank you for using PyTemplates!",
-    )
-    return final_message
+@app.callback(Output("display-value", "children"), [Input("dropdown", "value")])
+def display_value(value):
+    return f"You have selected {value}"
 
 
 if __name__ == "__main__":
-    app()
+    app.run_server(debug=True)
