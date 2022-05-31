@@ -2,7 +2,7 @@ from fastapi import __version__ as fastapi_version
 from fastapi.testclient import TestClient
 
 from pytemplates import __version__ as pytemplates_version
-from pytemplates.app import app
+from pytemplates.index import app
 
 client = TestClient(app)
 

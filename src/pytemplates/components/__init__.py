@@ -1,2 +1,1 @@
-from .module1 import greet
-from .module2 import wish_farewell
+from .body import Body, Result
