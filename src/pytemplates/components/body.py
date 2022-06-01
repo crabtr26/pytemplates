@@ -1,13 +1,10 @@
-import json
-import os
-import socket
-
 from dash import Input, Output, State, ctx, dcc, html
 from dash.exceptions import PreventUpdate
 
 from pytemplates.app import app
+from pytemplates.components.whoami_table import WhoamiTable
 
-Body = html.Div(
+Form = html.Div(
     className="form-container",
     children=[
         html.Div(
@@ -15,72 +12,62 @@ Body = html.Div(
             children=[
                 html.H2(
                     className="button-header",
-                    children="Enter your name to recieve a greeting",
+                    children="Enter your name:",
                 ),
-                html.Button("Greet", id="hello-submit"),
-                dcc.Input(id="hello-input", type="text"),
+                html.Div(
+                    className="row",
+                    children=[
+                        html.Button("Greet", id="hello-btn"),
+                        dcc.Input(id="hello-user", type="text"),
+                    ],
+                ),
+                html.Div(
+                    className="row",
+                    children=[
+                        html.Button("Wish Farewell", id="goodbye-btn"),
+                        dcc.Input(id="goodbye-user", type="text"),
+                    ],
+                ),
                 html.H2(
                     className="button-header",
-                    children="Enter your name to recieve a wish farewell",
+                    children="Check where the request is handled:",
                 ),
-                html.Button("Wish Farewell", id="goodbye-submit"),
-                dcc.Input(id="goodbye-input", type="text"),
-                html.H2(
-                    className="button-header",
-                    children="Check where the request is handled",
-                ),
-                html.Button("Whoami", id="whoami-submit"),
+                html.Button("Whoami", id="whoami-btn"),
             ],
-        )
+        ),
     ],
 )
 
-Result = html.Div(id="output", className="output-container", children="")
-
-Header = html.H1(className="app-header", children="PyTemplates")
+Result = html.Div(id="result", className="result-container", children="")
 
 
 @app.callback(
-    Output("output", "children"),
     inputs=[
-        Input("hello-submit", "n_clicks"),
-        Input("goodbye-submit", "n_clicks"),
-        Input("whoami-submit", "n_clicks"),
+        Input("hello-btn", "n_clicks"),
+        Input("goodbye-btn", "n_clicks"),
+        Input("whoami-btn", "n_clicks"),
     ],
-    state=[State("hello-input", "value"), State("goodbye-input", "value")],
+    output=[
+        Output("result", "children"),
+        Output("hello-user", "value"),
+        Output("goodbye-user", "value"),
+    ],
+    state=[State("hello-user", "value"), State("goodbye-user", "value")],
 )
-def update_output(
+def update_result(
     hello_clicks, goodbye_clicks, whoami_clicks, hello_user, goodbye_user
 ):
     button_clicked = ctx.triggered_id
 
+    # Do not show any result until a button is pressed
     if hello_clicks is None and goodbye_clicks is None and whoami_clicks is None:
         raise PreventUpdate
 
-    if button_clicked == "whoami-submit":
-        table = html.Table(
-            id="whoami-table",
-            children=[
-                html.Tr(
-                    children=[
-                        html.Th("Host Name"),
-                        html.Th("Host IP"),
-                        html.Th("Process ID"),
-                    ]
-                ),
-                html.Tr(
-                    children=[
-                        html.Th(socket.gethostname()),
-                        html.Th(socket.gethostbyname(socket.gethostname())),
-                        html.Th(os.getpid()),
-                    ]
-                ),
-            ],
-        )
-        return table
-    elif button_clicked == "hello-submit" and hello_user:
-        return f"Hello {hello_user}!"
-    elif button_clicked == "goodbye-submit" and goodbye_user:
-        return f"Goodbye {goodbye_user}!"
+    if button_clicked == "whoami-btn":
+        return [WhoamiTable, "", ""]
+    elif button_clicked == "hello-btn" and hello_user:
+        return [f"Hello {hello_user}!", "", ""]
+    elif button_clicked == "goodbye-btn" and goodbye_user:
+        return [f"Goodbye {goodbye_user}!", "", ""]
     else:
-        return "Please provide a username."
+        return ["Please provide a username.", "", ""]

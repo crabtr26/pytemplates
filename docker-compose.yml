@@ -92,6 +92,8 @@ services:
       # Use the public network created to be shared between Traefik and
       # any other service that needs to be publicly available with HTTPS
       - traefik-public
+    command:
+      - --workers=2
     deploy:
       mode: replicated
       replicas: 1

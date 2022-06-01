@@ -1,20 +1,21 @@
 .app {
     text-align: center;
-    background-color: #211F2B;
+    background-color: #1F4462;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    margin: 0;
-    padding: 0;
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
     width: 100vw;
     height: 100vh;
 }
 
 .app-header {
-    text-align: center;
+    margin-top: 0px;
     padding: 20px;
     color: white;
-    font-size: 44px;
+    background-color: #346D9C;
+    font-size: 48px;
     font-weight: 500;
-    margin-top: 10px;
 }
 
 .form-container {
@@ -23,12 +24,17 @@
     border: 2px solid;
     border-radius: 7px;
     padding: 20px;
-    background-color: rgba(255, 255, 255, 0.1);
-    line-height: 40px;
-    text-align: center;
-  }
+    background-color: #346D9C;
+}
 
-.output-container {
+.row {
+    display: flex;
+    width: 100%;
+    /* justify-content: left;
+    align-items: left; */
+}
+
+.result-container {
     margin: auto;
     width: 33%;
     border: 0px;
@@ -38,38 +44,36 @@
 }
 
 h2 {
-    color: rgba(255, 255, 255, 0.5);
+    color: white;
     font-size: 24px;
     font-weight: 500;
     margin-bottom: 10px;
-    margin-top: 0px;
+    margin-top: 10px;
 }
 
 button {
-    display: block;
     text-decoration: none;
     border-radius: 7px;
-    margin-bottom: 10px;
+    margin: auto;
     cursor: pointer;
     font-size: 20px;
     font-weight: 600;
-    border: 2px #617BFF solid;
-    width: 100%;
-    color: white;
-    background-color: #617BFF;
+    border: 2px #FEDF59 solid;
+    width: auto;
+    color: #1D2832;
+    background-color: #FEDF59;
     padding: 10px;
     transition: all 0.2s;
-    text-align: center;
 }
 
 button:hover {
-    border: 2px #8095FF solid;
-    background-color: #8095FF;
+    border: 2px #FFEC99 solid;
+    background-color: #FFEC99;
 }
 
 button:disabled {
-    border: 2px rgba(255, 255, 255, 0.1) solid;
-    background-color: rgba(255, 255, 255, 0.1);
+    border: 2px grey;
+    background-color: grey;
 }
 
 input,
@@ -77,13 +81,14 @@ textarea {
   position: relative;
   text-align: center;
   display: block;
-  margin: 0;
+  margin: auto;
   border-radius: 7px;
   border: 2px white solid;
   background-color: white;
-  padding: 15px;
-  width: 100%;
-  color: #1E1C29;
+  padding: 10px;
+  width: 50%;
+  font-size: 20px;
+  color: #1D2832;
   margin-bottom: 20px;
   box-sizing: border-box;
   transition: all 0.2s;
@@ -95,14 +100,24 @@ textarea:focus {
   border: 2px #617BFF solid;
 }
 
-table, th, td {
-    border: 0px solid;
-    background-color: rgba(255, 255, 255, 0.1);
-    color: white;
-    font-size: 24px;
+th, tr {
+    border: 1px solid;
+    background-color: white;
+    color: #1D2832;
+    font-size: 20px;
     font-weight: 500;
+    margin: auto;
+    padding: 2px;
 }
 
 table {
+    border: 2px solid;
+    border-radius: 7px;
+    background-color: white;
+    color: #1D2832;
+    font-size: 20px;
+    font-weight: 500;
+    margin: auto;
+    padding: 5px;
     width: 100%;
 }

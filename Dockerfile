@@ -38,4 +38,4 @@ FROM python:3.8-slim AS runtime
 COPY --from=build .venv .venv
 ENV PATH=".venv/bin:$PATH"
 EXPOSE 80
-ENTRYPOINT ["gunicorn", "pytemplates.app:server", "--bind", "0.0.0.0:80"]
+ENTRYPOINT ["gunicorn", "pytemplates.main:server", "--bind", "0.0.0.0:80"]
