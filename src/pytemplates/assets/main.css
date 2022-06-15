@@ -25,13 +25,12 @@
     border-radius: 7px;
     padding: 20px;
     background-color: #346D9C;
+    align-items: center;
+    justify-content: center;
 }
 
 .row {
     display: flex;
-    width: 100%;
-    /* justify-content: left;
-    align-items: left; */
 }
 
 .result-container {
@@ -59,7 +58,7 @@ button {
     font-size: 20px;
     font-weight: 600;
     border: 2px #FEDF59 solid;
-    width: auto;
+    width: 33%;
     color: #1D2832;
     background-color: #FEDF59;
     padding: 10px;
@@ -80,8 +79,10 @@ input,
 textarea {
   position: relative;
   text-align: center;
-  display: block;
-  margin: auto;
+  display: flex;
+  margin-top: 18px;
+  margin-right: auto;
+  /* margin: auto; */
   border-radius: 7px;
   border: 2px white solid;
   background-color: white;
