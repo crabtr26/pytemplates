@@ -1,4 +1,4 @@
-```
+```bash
 
    ___        _____                         _         _
   / _ \ _   _/__   \ ___  _ __ ___   _ __  | |  __ _ | |_  ___  ___
@@ -17,8 +17,8 @@
 [![pre-commit.ci status](https://results.pre-commit.ci/badge/github/crabtr26/pytemplates/main.svg)](https://results.pre-commit.ci/latest/github/crabtr26/pytemplates/main)
 <!-- [![Imports: isort](https://img.shields.io/badge/%20imports-isort-EE8236?style=flat)](https://pycqa.github.io/isort/) -->
 
-
 ## Description
+
 A basic template which includes proper package structure, imports, and a working `setup.py`.
 Includes flake8, pylint, isort, and pytest settings with configurations compatible with
 the black autoformatter. Pylint settings are based on the Google style standards for python
@@ -26,16 +26,20 @@ and adapted for black compatibility. Package metadata and dependency information
 in the pyproject.toml.
 
 ## Setup
+
 Using `poetry`:
-```
+
+```bash
 git clone https://github.com/crabtr26/pytemplates.git
 cd pytemplates
 poetry install --no-dev
 ```
 
 ## Usage
+
 From the CLI:
-```
+
+```bash
 cd pytemplates
 poetry shell
 pytemplates --hello {user}
@@ -44,6 +48,7 @@ pytemplates --test
 ```
 
 From a `.py` file:
+
 ```python
 import pytemplates
 pytemplates.__version__
@@ -56,23 +61,40 @@ wish_farewell(user="Jacob")
 ```
 
 ## Development Setup
+
 Using `poetry`:
-```
+
+```bash
 git clone https://github.com/crabtr26/pytemplates.git
 cd pytemplates
 poetry install
 ```
 
-## Testing
-To run the tests locally using the development environment:
+## Production Deployment
+
+Using `Docker`:
+
+```bash
+git clone https://github.com/crabtr26/pytemplates.git
+cd pytemplates
+docker build . -t pytemplates
+docker run pytemplates --test
 ```
+
+## Testing
+
+To run the tests locally using the development environment:
+
+```bash
 cd pytemplates
 poetry run pytest
 ```
 
 ## Documentation
+
 To build and view the documentation locally using the development environment:
-```
+
+```bash
 cd pytemplates/docs
 make html
 google-chrome build/html/index.html

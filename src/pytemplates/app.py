@@ -36,7 +36,7 @@ def main():
     if args["test"]:
         hello = greet(user="PyTemplates User")
         message = f"{hello} PyTemplates has been installed successfully!"
-        mypackage_info = f"mypackage=={__version__}"
+        mypackage_info = f"pytemplates=={__version__}"
         pandas_info = f"pandas=={pd.__version__}"
         print(message, mypackage_info, pandas_info)
         goodbye = wish_farewell(user="PyTemplates User")
