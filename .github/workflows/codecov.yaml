@@ -1,4 +1,4 @@
-name: CI
+name: CI/CD
 
 on: [push, pull_request]
 
@@ -25,7 +25,7 @@ jobs:
 
     - name: Run tests and collect coverage
       run: poetry run pytest
-      
+
     - name: Upload coverage reports to Codecov
       uses: codecov/codecov-action@v3
 
