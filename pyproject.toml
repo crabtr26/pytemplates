@@ -1,7 +1,7 @@
 [tool.poetry]
 name = "pytemplates"
 version = "1.0.0"
-description = "A simple template for a python package."
+description = "A simple template for a fastapi application."
 repository = "https://github.com/crabtr26/pytemplates"
 authors = ["crabtr26 <crabtr26@gmail.com>"]
 license = "CC0 v1.0 Universal"
