@@ -1,3 +1,5 @@
+import subprocess
+
 from fastapi import __version__ as fastapi_version
 from fastapi.testclient import TestClient
 
@@ -23,6 +25,12 @@ def test_goodbye():
     response = client.get("/goodbye?user=jacob")
     assert response.status_code == 200
     assert response.json() == "Goodbye jacob!"
+
+
+def test_whoami():
+    response = client.get("/whoami")
+    assert response.status_code == 200
+    assert list(response.json().keys()) == ["host_name", "host_ip", "process_id"]
 
 
 def test_test():
