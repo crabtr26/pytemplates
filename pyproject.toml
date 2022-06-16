@@ -1,7 +1,7 @@
 [tool.poetry]
 name = "pytemplates"
 version = "1.0.0"
-description = "A simple template for a python package."
+description = "A simple template for a python CLI."
 repository = "https://github.com/crabtr26/pytemplates"
 authors = ["crabtr26 <crabtr26@gmail.com>"]
 license = "CC0 v1.0 Universal"
@@ -12,7 +12,7 @@ classifiers = [
 
 [tool.poetry.dependencies]
 python = "^3.8"
-pandas = "^1.4.2"
+typer = "^0.4.1"
 
 [tool.poetry.dev-dependencies]
 pylint = "^2.13.8"
@@ -21,7 +21,6 @@ isort = "^5.10.1"
 pre-commit = "^2.19.0"
 black = "^22.3.0"
 pytest = "^7.1.2"
-pytest-asyncio = "^0.18.3"
 pytest-cov = "^3.0.0"
 Sphinx = "^4.5.0"
 sphinx-rtd-theme = "^1.0.0"
@@ -31,4 +30,4 @@ requires = ["poetry-core>=1.0.0"]
 build-backend = "poetry.core.masonry.api"
 
 [tool.poetry.scripts]
-pytemplates = "pytemplates.app:main"
+pytemplates = "pytemplates.main:app"
