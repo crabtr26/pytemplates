@@ -3,7 +3,7 @@ name: CI/CD
 on: [push, pull_request]
 
 jobs:
-  build:
+  test_build_release:
     runs-on: ubuntu-latest
     defaults:
       run:
