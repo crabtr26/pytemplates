@@ -1,3 +1,6 @@
+import os
+import socket
+
 import typer
 
 from pytemplates.core.module1 import greet
@@ -18,7 +21,9 @@ def goodbye(user: str):
 
 @app.command()
 def whoami():
-    typer.echo("Socket stuff")
+    typer.echo(f"Host Name: {socket.gethostname()}")
+    typer.echo(f"Host IP: {socket.gethostbyname(socket.gethostname())}")
+    typer.echo(f"Process ID: {os.getpid()}")
 
 
 if __name__ == "__main__":

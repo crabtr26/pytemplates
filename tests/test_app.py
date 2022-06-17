@@ -20,4 +20,6 @@ def test_goodbye():
 def test_whoami():
     result = runner.invoke(app, ["whoami"])
     assert result.exit_code == 0
-    assert "Socket stuff" in result.stdout
+    assert "Host Name" in result.stdout
+    assert "Host IP" in result.stdout
+    assert "Process ID" in result.stdout
