@@ -48,17 +48,6 @@ pytemplates goodbye {user}
 pytemplates whoami
 ```
 
-From a `.py` file:
-
-```python
-import pytemplates
-pytemplates.__version__
-pytemplates.greet(user="Jacob")
-
-from pytemplates.core import wish_farewell
-wish_farewell(user="Jacob")
-```
-
 ## Development Setup
 
 Using `poetry`:
