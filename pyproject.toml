@@ -31,3 +31,18 @@ build-backend = "poetry.core.masonry.api"
 
 [tool.poetry.scripts]
 pytemplates = "pytemplates.main:app"
+
+[tool.pytest.ini_options]
+minversion = "7.1"
+addopts = "-rf -vv --cov=src --cov-report=term-missing"
+testpaths = [
+    "tests",
+]
+
+[tool.isort]
+profile = "black"
+
+[tool.coverage.report]
+exclude_lines = [
+    "if __name__ == .__main__.:"
+]
