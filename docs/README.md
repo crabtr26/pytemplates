@@ -1,12 +1,17 @@
+# Modifying Documentation
+
 ## Build
+
 To build and view the documentation locally using the development environment, follow the steps below:
-```
+
+```bash
 cd pytemplates/docs
 make html
 google-chrome build/html/index.html
 ```
 
 ## Update
+
 To generate documentation for a new project, or to update the documentation after code changes, follow the steps below:
 
 1. `mkdir docs`

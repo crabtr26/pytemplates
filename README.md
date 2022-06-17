@@ -19,12 +19,7 @@
 
 ## Description
 
-A basic template which includes proper package structure with a functioning package installation.
-The package is built using poetry; metadata and dependency information is stored in the pyproject.toml.
-Includes flake8, pylint, isort, and pytest settings with configurations compatible with
-the black autoformatter. Pylint settings are based on the Google style standards for python
-and adapted for black compatibility.  Testing is automated using github workflows, codecov.io,
-and pre-commit.ci. Application deployment is managed using multi-staged docker builds for fast develop/deploy cycles.
+A basic python package template which includes proper package structure with a functioning package installation. The package is built using poetry; metadata and dependency information is stored in the pyproject.toml. Includes flake8, pylint, isort, and pytest settings with configurations compatible with the black autoformatter. Pylint settings are based on the Google style standards for python and adapted for black compatibility.  Testing is automated using github workflows, codecov.io, and pre-commit.ci. Application deployment is managed using multi-staged docker builds for fast develop/deploy cycles.
 
 ## Setup
 
@@ -38,16 +33,6 @@ poetry install --no-dev
 
 ## Usage
 
-From the terminal:
-
-```bash
-cd pytemplates
-poetry shell
-pytemplates hello {user}
-pytemplates goodbye {user}
-pytemplates whoami
-```
-
 From a `.py` file:
 
 ```python
@@ -55,7 +40,7 @@ import pytemplates
 pytemplates.__version__
 pytemplates.greet(user="Jacob")
 
-from pytemplates.core import wish_farewell
+from pytemplates import wish_farewell
 wish_farewell(user="Jacob")
 ```
 
@@ -67,17 +52,6 @@ Using `poetry`:
 git clone https://github.com/crabtr26/pytemplates.git
 cd pytemplates
 poetry install
-```
-
-## Production Deployment
-
-Using `Docker`:
-
-```bash
-git clone https://github.com/crabtr26/pytemplates.git
-cd pytemplates
-docker build . -t pytemplates
-docker run pytemplates whoami
 ```
 
 ## Testing
