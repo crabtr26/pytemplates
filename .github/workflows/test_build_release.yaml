@@ -23,8 +23,8 @@ jobs:
     - name: Install pytemplates
       run: poetry install
 
-    - name: Install chromedriver
-      uses: nanasess/setup-chromedriver@v1
+    - name: Remove Chrome
+      run: sudo apt purge google-chrome-stable
 
     - name: Run tests and collect coverage
       run: poetry run pytest
