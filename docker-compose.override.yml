@@ -16,6 +16,22 @@ services:
       restart_policy:
         condition: on-failure
 
+  frontend:
+    ports:
+      - 3000:80
+    deploy:
+      mode: replicated
+      replicas: 1
+      resources:
+        limits:
+          cpus: '1'
+          memory: 1500M
+        reservations:
+          cpus: '1'
+          memory: 1500M
+      restart_policy:
+        condition: on-failure
+
 networks:
   traefik-public:
     external: false
