@@ -31,16 +31,3 @@ def test_whoami():
     response = client.get("/whoami")
     assert response.status_code == 200
     assert list(response.json().keys()) == ["host_name", "host_ip", "process_id"]
-
-
-def test_test():
-    response = client.get("/test")
-    assert response.status_code == 200
-    message = [
-        "Hello PyTemplates User! PyTemplates has been installed successfully!",
-        f"pytemplates=={pytemplates_version}",
-        f"fastapi=={fastapi_version}",
-        "Goodbye PyTemplates User!",
-        "Thank you for using PyTemplates!",
-    ]
-    assert response.json() == message
