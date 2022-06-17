@@ -20,7 +20,7 @@ async def hello(user: str):
 
 
 @router.get("/goodbye")
-async def hello(user: str):
+async def goodbye(user: str):
     return wish_farewell(user=user)
 
 
