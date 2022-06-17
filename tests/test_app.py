@@ -1,6 +1,6 @@
 from fastapi.testclient import TestClient
 
-from pytemplates.app import app
+from pytemplates.main import app
 
 client = TestClient(app)
 
