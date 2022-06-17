@@ -3,7 +3,7 @@ name: CI/CD
 on: [push, pull_request]
 
 jobs:
-  build:
+  test_build_release:
     runs-on: ubuntu-latest
     defaults:
       run:
@@ -26,8 +26,11 @@ jobs:
     - name: Run tests and collect coverage
       run: poetry run pytest
 
+    - name: Write a JSON coverage report
+      run: poetry run coverage json
+
     - name: Upload coverage reports to Codecov
-      uses: codecov/codecov-action@v3
+      uses: codecov/codecov-action@v1
 
     - name: Log in to Docker Hub
       uses: docker/login-action@f054a8b539a109f9f41c372932f1ae047eff08c9
