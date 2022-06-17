@@ -86,7 +86,6 @@ services:
 
   api:
     image: crabtr26/pytemplates:fastapi
-    build: ./
     restart: always
     networks:
       # Use the public network created to be shared between Traefik and
@@ -126,7 +125,6 @@ services:
 
   frontend:
     image: crabtr26/pytemplates:plotly_dash
-    build: ./
     restart: always
     networks:
       # Use the public network created to be shared between Traefik and
