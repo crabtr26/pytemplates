@@ -1,23 +1,23 @@
-import subprocess
+from typer.testing import CliRunner
 
-import typer
+from pytemplates.main import app
 
-import pytemplates
+runner = CliRunner()
 
 
-def test_app():
-    hello = subprocess.run(
-        ["pytemplates", "hello", "Jacob"], capture_output=True, text=True, check=True
-    )
-    assert hello.stdout == "Hello Jacob!\n"
-    goodbye = subprocess.run(
-        ["pytemplates", "goodbye", "Jacob"],
-        capture_output=True,
-        text=True,
-        check=True,
-    )
-    assert goodbye.stdout == "Goodbye Jacob!\n"
-    test = subprocess.run(
-        ["pytemplates", "whoami"], capture_output=True, text=True, check=True
-    )
-    assert "Socket stuff" in test.stdout
+def test_hello():
+    result = runner.invoke(app, ["hello", "Jacob"])
+    assert result.exit_code == 0
+    assert "Hello Jacob!" in result.stdout
+
+
+def test_goodbye():
+    result = runner.invoke(app, ["goodbye", "Jacob"])
+    assert result.exit_code == 0
+    assert "Goodbye Jacob!" in result.stdout
+
+
+def test_whoami():
+    result = runner.invoke(app, ["whoami"])
+    assert result.exit_code == 0
+    assert "Socket stuff" in result.stdout
