@@ -26,8 +26,8 @@ jobs:
     - name: Run tests and collect coverage
       run: poetry run pytest
 
-    - name: Write a JSON coverage report
-      run: poetry run coverage json
+    # - name: Write a JSON coverage report
+    #   run: poetry run coverage json
 
     - name: Upload coverage reports to Codecov
       uses: codecov/codecov-action@v1
