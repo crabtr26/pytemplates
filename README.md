@@ -27,6 +27,9 @@ and adapted for black compatibility.  Testing is automated using github workflow
 and pre-commit.ci. Application deployment is managed using multi-staged docker builds for fast develop/deploy
 cycles.
 
+*Demo Available at - * https://api.pytemplates.gallery/
+See https://api.pytemplates.gallery/docs to get started.
+
 ## Basic Setup
 
 Using `poetry`:
