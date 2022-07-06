@@ -34,10 +34,17 @@ The source code for the two services deployed in this template are located in th
 
 Public docker images are also available using the repo crabtr26/pytemplates:
 
-Fastapi - docker pull crabtr26/pytemplates:fastapi
+Fastapi:
 
-Plotly Dashboard - docker pull crabtr26/pytemplates:plotly_dash
+```bash
+docker pull crabtr26/pytemplates:fastapi
+```
 
+Plotly Dashboard:
+
+```bash
+docker pull crabtr26/pytemplates:plotly_dash
+```
 
 ## Development Setup
 
