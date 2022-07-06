@@ -24,15 +24,16 @@ A basic microservices template which includes three services: an API built using
 ## Services
 The source code for the two services deployed in this template are located in the *fastapi* and *plotly_dash* branches respectively. Public demos are also available:
 
-**Fastapi Demo Available at -** https://api.pytemplates.gallery/
+**Fastapi Demo -** https://api.pytemplates.gallery/
 
-**Fastapi Documentation Available at -** https://api.pytemplates.gallery/docs
+**Fastapi Documentation -** https://api.pytemplates.gallery/docs
 
-**Plotly Dashboard Demo Available at -** https://pytemplates.gallery/
+**Plotly Dashboard Demo -** https://pytemplates.gallery/
 
 Public docker images are also available at:
 
 Fastapi - crabtr26/pytemplates:fastapi
+
 Plotly Dashboard - crabtr26/pytemplates:plotly_dash
 
 
