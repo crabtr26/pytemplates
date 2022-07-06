@@ -29,7 +29,7 @@ cycles.
 
 **Demo Available at -** https://api.pytemplates.gallery/
 
-See https://api.pytemplates.gallery/docs to get started.
+**API Documentation Available at -** https://api.pytemplates.gallery/docs
 
 ## Basic Setup
 
