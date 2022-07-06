@@ -19,17 +19,15 @@
 
 ## Description
 
-A basic template which includes proper package structure with a functioning package installation.
+A basic plotly dashboard template which includes proper package structure with a functioning package installation.
 The package is built using poetry; metadata and dependency information is stored in the pyproject.toml.
-Includes flake8, pylint, isort, and pytest settings with configurations compatible with
+This template includes flake8, pylint, isort, and pytest settings with configurations compatible with
 the black autoformatter. Pylint settings are based on the Google style standards for python
 and adapted for black compatibility.  Testing is automated using github workflows, codecov.io,
 and pre-commit.ci. Application deployment is managed using multi-staged docker builds for fast develop/deploy
 cycles.
 
-This template includes two services: an API built using fastapi and a reverse-proxy built using traefik. The
-docker-compose.yml can be used to build and deploy both services on a single machine or on a docker swarm cluster.
-The docker-compose.override.yml is used to override the production configuration during local development.
+**Demo Available at -** https://pytemplates.gallery/
 
 ## Basic Setup
 
@@ -72,23 +70,6 @@ cd pytemplates
 docker compose up
 ```
 
-## Production Setup
-On a single server using `Docker Compose`:
-
-```bash
-git clone https://github.com/crabtr26/pytemplates.git
-cd pytemplates
-docker compose -f docker-compose.yml up
-```
-
-On a single server or a cluster using `Docker Swarm`:
-
-```bash
-git clone https://github.com/crabtr26/pytemplates.git
-cd pytemplates
-docker stack deploy -c docker-compose.yml pytemplates
-```
-
 ## Testing
 
 To run the unit tests locally using the development environment:
@@ -96,23 +77,6 @@ To run the unit tests locally using the development environment:
 ```bash
 cd pytemplates
 poetry run pytest
-```
-
-To run performance tests locally using the development environment,
-run the app from one terminal:
-
-```bash
-cd pytemplates
-poetry shell
-uvicorn pytemplates.app:app
-```
-
-Then run locust from another terminal:
-
-```bash
-cd pytemplates
-poetry shell
-locust -f tests/test_performance.py
 ```
 
 ## Documentation
