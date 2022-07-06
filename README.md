@@ -32,7 +32,7 @@ The source code for the two services deployed in this template are located in th
 
 ## Images
 
-Public docker images are also available using the repo crabtr26/pytemplates:
+Public docker images are also available from the repository crabtr26/pytemplates.
 
 Fastapi:
 
