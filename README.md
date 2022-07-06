@@ -19,50 +19,10 @@
 
 ## Description
 
-A basic template which includes proper package structure with a functioning package installation.
-The package is built using poetry; metadata and dependency information is stored in the pyproject.toml.
-Includes flake8, pylint, isort, and pytest settings with configurations compatible with
-the black autoformatter. Pylint settings are based on the Google style standards for python
-and adapted for black compatibility.  Testing is automated using github workflows, codecov.io,
-and pre-commit.ci. Application deployment is managed using multi-staged docker builds for fast develop/deploy
-cycles.
+A basic microservices template which includes three services: an API built using fastapi, a plotly dashboard, and a reverse-proxy built using traefik. The docker-compose.yml can be used to build and deploy the API and the dashboard behind the traefik reverse-proxy, exposing both services through a secure HTTPS endpoint. The services can be deployed on a single host machine or a docker swarm cluster, and the docker-compose.override.yml can be used to override the default, multi-worker, production configuration during local development.
 
-This template includes two services: an API built using fastapi and a reverse-proxy built using traefik. The
-docker-compose.yml can be used to build and deploy both services on a single machine or on a docker swarm cluster.
-The docker-compose.override.yml is used to override the production configuration during local development.
-
-## Basic Setup
-
-Using `poetry`:
-
-```bash
-git clone https://github.com/crabtr26/pytemplates.git
-cd pytemplates
-poetry install --no-dev
-poetry shell
-uvicorn pytemplates.app:app
-```
 
 ## Development Setup
-
-Using `poetry`:
-
-```bash
-git clone https://github.com/crabtr26/pytemplates.git
-cd pytemplates
-poetry install
-poetry shell
-uvicorn pytemplates.app:app
-```
-
-Using `Docker`:
-
-```bash
-git clone https://github.com/crabtr26/pytemplates.git
-cd pytemplates
-docker build . -t api
-docker run --rm -p 8000:80 api
-```
 
 Using `Docker Compose`:
 
@@ -87,40 +47,4 @@ On a single server or a cluster using `Docker Swarm`:
 git clone https://github.com/crabtr26/pytemplates.git
 cd pytemplates
 docker stack deploy -c docker-compose.yml pytemplates
-```
-
-## Testing
-
-To run the unit tests locally using the development environment:
-
-```bash
-cd pytemplates
-poetry run pytest
-```
-
-To run performance tests locally using the development environment,
-run the app from one terminal:
-
-```bash
-cd pytemplates
-poetry shell
-uvicorn pytemplates.app:app
-```
-
-Then run locust from another terminal:
-
-```bash
-cd pytemplates
-poetry shell
-locust -f tests/test_performance.py
-```
-
-## Documentation
-
-To build and view the documentation locally using the development environment:
-
-```bash
-cd pytemplates/docs
-make html
-google-chrome build/html/index.html
 ```
