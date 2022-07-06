@@ -30,6 +30,8 @@ The source code for the two services deployed in this template are located in th
 
 **Plotly Dashboard Demo -** https://pytemplates.gallery/
 
+## Images
+
 Public docker images are also available at:
 
 Fastapi - crabtr26/pytemplates:fastapi
