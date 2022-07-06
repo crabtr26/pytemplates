@@ -26,7 +26,7 @@ The source code for the two services deployed in this template are located in th
 
 **Fastapi Demo -** https://api.pytemplates.gallery/
 
-**Fastapi Documentation -** https://api.pytemplates.gallery/docs
+**Fastapi Demo Documentation -** https://api.pytemplates.gallery/docs
 
 **Plotly Dashboard Demo -** https://pytemplates.gallery/
 
