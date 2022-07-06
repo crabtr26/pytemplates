@@ -19,7 +19,7 @@
 
 ## Description
 
-A basic microservices template which includes three services: an API built using fastapi, a plotly dashboard, and a reverse-proxy built using traefik. The docker-compose.yml can be used to build and deploy the API and the dashboard behind the traefik reverse-proxy, exposing both services through a secure HTTPS endpoint. The services can be deployed on a single host machine or a docker swarm cluster, and the docker-compose.override.yml can be used to override the default, multi-worker, production configuration during local development.
+A basic microservices template which includes three services: an API built using fastapi, a dashboard built using plotly, and a reverse-proxy built using traefik. The docker-compose.yml can be used to deploy the API and the dashboard behind the reverse-proxy, exposing both services through a single, secure, HTTPS endpoint. The services can be deployed either on a single host machine or on a docker swarm cluster. In either case, the ingress load balancing will be managed by traefik. Multiple uvicorn workers are used to scale the fastapi service, while multiple gunicorn workers are used to scale the plotly dashboard. The docker-compose.override.yml can be used to override the default, multi-worker, production configuration during local development.
 
 ## Services
 The source code for the two services deployed in this template are located in the *fastapi* and *plotly_dash* branches respectively. Public demos are also available:
