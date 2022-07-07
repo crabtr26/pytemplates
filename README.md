@@ -38,7 +38,7 @@ git clone https://github.com/crabtr26/pytemplates.git
 cd pytemplates
 poetry install --no-dev
 poetry shell
-uvicorn pytemplates.app:app
+gunicorn pytemplates.main:app
 ```
 
 ## Development Setup
@@ -50,7 +50,7 @@ git clone https://github.com/crabtr26/pytemplates.git
 cd pytemplates
 poetry install
 poetry shell
-uvicorn pytemplates.app:app
+gunicorn pytemplates.main:app
 ```
 
 Using `Docker`:
@@ -59,7 +59,7 @@ Using `Docker`:
 git clone https://github.com/crabtr26/pytemplates.git
 cd pytemplates
 docker build . -t api
-docker run --rm -p 8000:80 api
+docker run --rm -p 3000:80 api
 ```
 
 Using `Docker Compose`:
