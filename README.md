@@ -40,7 +40,7 @@ git clone https://github.com/crabtr26/pytemplates.git
 cd pytemplates
 poetry install --no-dev
 poetry shell
-uvicorn pytemplates.app:app
+uvicorn pytemplates.main:app
 ```
 
 ## Development Setup
@@ -52,7 +52,7 @@ git clone https://github.com/crabtr26/pytemplates.git
 cd pytemplates
 poetry install
 poetry shell
-uvicorn pytemplates.app:app
+uvicorn pytemplates.main:app
 ```
 
 Using `Docker`:
@@ -87,7 +87,7 @@ run the app from one terminal:
 ```bash
 cd pytemplates
 poetry shell
-uvicorn pytemplates.app:app
+uvicorn pytemplates.main:app
 ```
 
 Then run locust from another terminal:
